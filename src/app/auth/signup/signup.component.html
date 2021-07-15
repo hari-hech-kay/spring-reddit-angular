@@ -1,0 +1,80 @@
+<div class="register">
+  <div class="row align-content-center justify-content-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Signup on Reddit</div>
+        <div class="card-body">
+          <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control"
+                  placeholder="Username"
+                />
+                <span
+                  *ngIf="
+                    !signupForm.get('username').valid &&
+                    signupForm.get('username').touched
+                  "
+                >
+                  Please provide a valid username
+                </span>
+              </div>
+              <div class="col">
+                <input
+                  formControlName="password"
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                />
+                <span
+                  *ngIf="
+                    !signupForm.get('password').valid &&
+                    signupForm.get('password').touched
+                  "
+                >
+                  Please provide a valid Password
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input
+                  type="email"
+                  formControlName="email"
+                  class="form-control"
+                  placeholder="Email"
+                />
+                <span
+                  *ngIf="
+                    !signupForm.get('email').valid &&
+                    signupForm.get('email').touched
+                  "
+                >
+                  Please provide a valid email
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <input
+                  [disabled]="signupForm.invalid"
+                  class="btn btn-primary"
+                  value="SIGNUP"
+                  type="submit"
+                />
+              </div>
+              <div class="col">
+                <p>Already a redditor? <a href="#">Login here</a></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.register {
+  margin-top: 200px;
+}
+
+.form-control {
+  margin-bottom: 8px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+p {
+  margin-top: 8px;
+}
+
+span {
+  color: red;
+  font-size: 14px;
+}
